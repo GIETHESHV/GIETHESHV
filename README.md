@@ -52,6 +52,6 @@ Computer Science undergrad working across **AI/ML, systems security, and full-st
 
 <sub>Bored already? 🙂</sub>
 
-<a href="https://gietheshv.github.io/GIETHESHV/"><img src="https://img.shields.io/badge/▶ Play Jumping Box-0f172a?style=for-the-badge" alt="Play Jumping Box"/></a>
+<a href="https://gietheshv.github.io/GIETHESHV/"><img src="https://img.shields.io/badge/▶ Play this stupid game-0f172a?style=for-the-badge" alt="Play Jumping Box"/></a>
 
 </div>
