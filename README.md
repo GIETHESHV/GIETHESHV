@@ -11,7 +11,7 @@ Computer Science undergrad working across **AI/ML, systems security, and full-st
 
 **Interested in:** Applied Deep Learning · Generative AI Systems · Cryptography & Security Research · Blockchain Infrastructure · Conversational AI
 
-🎯 **Currently:** applying to CS/AI Master's programs in Germany · **Open to:** research collaborations, ML/security internships, hackathon teams
+**Currently:** applying to CS/AI Master's programs · **Open to:** research collaborations, ML/security internships, hackathon teams
 
 <br/>
 <br/>
