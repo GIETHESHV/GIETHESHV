@@ -9,6 +9,10 @@
 
 Computer Science undergrad working across **AI/ML, systems security, and full-stack development**. I care about building things that hold up under real constraints, not tutorial-grade demos — currently working toward a research-driven Master's abroad.
 
+**Interested in:** Applied Deep Learning · Generative AI Systems · Cryptography & Security Research · Blockchain Infrastructure · Conversational AI
+
+🎯 **Currently:** applying to CS/AI Master's programs in Germany · **Open to:** research collaborations, ML/security internships, hackathon teams
+
 <br/>
 <br/>
 
@@ -22,6 +26,16 @@ Computer Science undergrad working across **AI/ML, systems security, and full-st
 | Client Project | Gururayar Associates | Apr 2025 – Jul 2025 |
 | Deep Learning Model Developer Intern | NIT Trichy | Dec 2024 – Apr 2025 |
 | Web Developer Intern | Adovi Tech | Jun 2024 – Jul 2024 |
+
+<br/>
+
+### Publications
+
+| ISBN | Year |
+|---|---|
+| 979-8-3373-9549-4 | 2026 |
+| 978-81-946418-9-6 | 2025 |
+| 978-81-946418-7-2 | 2024 |
 
 <br/>
 
@@ -41,6 +55,15 @@ Computer Science undergrad working across **AI/ML, systems security, and full-st
 <br/>
 <br/>
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/GIETHESHV/GIETHESHV/output/github-contribution-grid-snake-dark.svg"/>
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/GIETHESHV/GIETHESHV/output/github-contribution-grid-snake.svg"/>
+  <img src="https://raw.githubusercontent.com/GIETHESHV/GIETHESHV/output/github-contribution-grid-snake.svg" width="600" alt="Contribution snake animation"/>
+</picture>
+
+<br/>
+<br/>
+
 ### Connect
 
 <a href="https://linkedin.com/in/gietheshvkr"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
@@ -52,6 +75,6 @@ Computer Science undergrad working across **AI/ML, systems security, and full-st
 
 <sub>Bored already? 🙂</sub>
 
-<a href="https://gietheshv.github.io/GIETHESHV/"><img src="https://img.shields.io/badge/▶ Play this stupid game-0f172a?style=for-the-badge" alt="Play Jumping Box"/></a>
+<a href="https://gietheshv.github.io/GIETHESHV/"><img src="https://img.shields.io/badge/▶ Play Jumping Box-0f172a?style=for-the-badge" alt="Play Jumping Box"/></a>
 
 </div>
