@@ -1,65 +1,57 @@
-# Hi there, I'm GIETHESHV K.R
+<div align="center">
 
-### 🚀 About Me
-I am a **B.Tech Computer Science and Engineering** student at **SRM Institute of Science and Technology, Tiruchirappalli (Class of 2027)**. Passionate about **AI, Machine Learning, Deep Learning, Blockchain, and Cybersecurity**, I love developing cutting-edge projects and contributing to open-source initiatives. 
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f172a,100:1e3a8a&height=130&section=header&text=Gietheshv%20K.R&fontSize=32&fontColor=ffffff&fontAlignY=40&desc=AI%20%7C%20Systems%20Security%20%7C%20Applied%20Research&descAlignY=62&descSize=13&animation=fadeIn" width="100%"/>
 
-I have hands-on experience in AI-driven applications, blockchain-based solutions, and cybersecurity research. As the **President of the Neuro Tech Titans AI Club**, I actively lead AI-related workshops, projects, and hackathons.
+<a href="https://linkedin.com/in/gietheshvkr"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="mailto:gietheshvkr@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
 
----
+<br/><br/>
 
-### 🔥 My Tech Stack:
-- **Programming Languages:** Python, JavaScript, C/C++, Java, SQL  
-- **AI & ML:** Deep Learning, TensorFlow, PyTorch, OpenCV, NLP  
-- **Blockchain:** Smart Contracts, Ethereum, Hyperledger Fabric  
-- **Cloud & DevOps:** AWS, GCP, Docker, Kubernetes  
-- **Web Development:** React, Node.js, Streamlit  
-- **Cybersecurity:** FortiGate Firewalls, Network Security  
+Computer Science undergrad working across **AI/ML, systems security, and full-stack development**. I care about building things that hold up under real constraints, not tutorial-grade demos — currently working toward a research-driven Master's abroad.
 
----
+<br/>
+<br/>
 
-### 📚 Certifications:
-- **FortiGate 7.4 Operator Course – Fortinet**  
-- **Machine Learning with Python – IBM (Coursera)**  
-- **The Joy of Computing using Python – NPTEL**  
-- **Career Essentials in Generative AI – Microsoft & LinkedIn**  
-- **Data Analytics in Google Cloud – Google (Coursera)**  
-- **Operating Systems and Security - Microsoft (Coursera)**  
+### Experience
 
----
+| Role | Organization | Duration |
+|---|---|---|
+| ML Model Developer Intern | CDAC | Feb 2026 – May 2026 |
+| Client Project | LiftTech Engg | Aug 2025 – Nov 2025 |
+| Blockchain/Crypto Ops & Smart Contract Dev Intern | NIT Trichy | Jun 2025 – Jul 2025 |
+| Client Project | Gururayar Associates | Apr 2025 – Jul 2025 |
+| Deep Learning Model Developer Intern | NIT Trichy | Dec 2024 – Apr 2025 |
+| Web Developer Intern | Adovi Tech | Jun 2024 – Jul 2024 |
 
-### 💡 Projects:
-- **[AI-Driven Blood Report Parser](#)** - AI-based medical report parser deployed on AWS/GCP.  
-- **[Deep Learning-Based Keypress Recognition Model](#)** - Model that detects keypresses using audio signals.  
-- **[Blockchain-Based Agri-Tech System](#)** - Ensuring transparency and fair pricing for farmers using blockchain.  
-- **[Online Medicine Ordering System with Prescription Recognition](#)** - AI-powered platform for prescription-based medicine ordering.  
+<br/>
 
----
+### Stack
 
-### 🌟 Work Experience:
-#### 📌 **Research Intern – NIT Trichy (Dec 2024 – Feb 2025)**
-- Researched **Side-Channel Attacks** in cryptographic implementations.  
-- Developed **Tap Track**, an AI-based system to analyze side-channel attack patterns.  
+<img src="https://skillicons.dev/icons?i=c,cpp,python,java,js,react,nodejs,html,css,tensorflow,pytorch,opencv,docker,kubernetes,aws,gcp,solidity,git&perline=9" width="380" alt="Tech stack"/>
 
-#### 📌 **Web Development Intern – Adaovi (May 2024 – July 2024)**
-- Built a **CRUD-based Blog Maker** in React and Node.js with optimized UI/UX.  
+<br/>
+<br/>
 
-#### 📌 **Google Developer Intern (Cohort 11) (Jan 2025 – Mar 2025)**
-- Worked on **cybersecurity solutions** and Fortinet security tools.  
+### GitHub Stats
 
-#### 📌 **Cybersecurity Intern – Fortinet (Cohort 9) (Nov 2024 – Feb 2025)**
-- Conducted **vulnerability assessments and penetration testing**.  
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=GIETHESHV&theme=github_dark" width="270" alt="GitHub stats"/>
+<img src="https://streak-stats.demolab.com?user=GIETHESHV&theme=dark&hide_border=true" width="270" alt="GitHub streak"/>
+<img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=GIETHESHV&theme=github_dark" width="270" alt="Most used languages"/>
 
----
+<br/>
+<br/>
 
-### 📢 Publications:
-📖 **"The Role of Drone Technology in Healthcare"**  
-Published in *The Interconnectedness of Nature and Academia: An Exploration*  
-ISBN: **978-81-946418-7-2** (The Dawn Publishers, Aug 8, 2024)
+### Connect
 
----
+<a href="https://linkedin.com/in/gietheshvkr"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="mailto:gietheshvkr@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=flat-square&logo=gmail&logoColor=white" alt="Email"/></a>
+<a href="https://github.com/GIETHESHV"><img src="https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github&logoColor=white" alt="GitHub"/></a>
 
-### 📬 Connect With Me:
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-gietheshvkr-blue?style=flat&logo=linkedin)](https://linkedin.com/in/gietheshvkr)  
-[![GitHub](https://img.shields.io/badge/GitHub-GIETHESHV-black?style=flat&logo=github)](https://github.com/GIETHESHV)  
-[![Email](https://img.shields.io/badge/Email-gietheshvkr@gmail.com-red?style=flat&logo=gmail)](mailto:gietheshvkr@gmail.com)  
+<br/>
+<br/>
 
+<sub>Bored already? 🙂</sub>
+
+<a href="https://gietheshv.github.io/GIETHESHV/"><img src="https://img.shields.io/badge/▶ Play Jumping Box-0f172a?style=for-the-badge" alt="Play Jumping Box"/></a>
+
+</div>
