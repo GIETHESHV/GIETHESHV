@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Jumping Box</title>
+<style>
+  :root{
+    --bg1:#0f172a; --bg2:#1e3a8a; --fg:#e2e8f0; --accent:#38bdf8; --ground:#334155;
+  }
+  *{box-sizing:border-box;}
+  html,body{
+    margin:0; height:100%;
+    background:linear-gradient(160deg,var(--bg1),var(--bg2));
+    color:var(--fg);
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    gap:16px; padding:20px;
+  }
+  #wrap{
+    position:relative; width:min(640px,92vw); aspect-ratio:640/220;
+    background:rgba(255,255,255,0.03);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:12px; overflow:hidden;
+    box-shadow:0 10px 40px rgba(0,0,0,0.35);
+  }
+  canvas{width:100%; height:100%; display:block;}
+  #hud{
+    position:absolute; top:10px; right:14px;
+    font-size:0.85rem; font-variant-numeric:tabular-nums;
+    color:var(--fg); opacity:0.85;
+  }
+  #overlay{
+    position:absolute; inset:0; display:flex; flex-direction:column;
+    align-items:center; justify-content:center; gap:10px;
+    background:rgba(15,23,42,0.55); text-align:center; padding:12px;
+  }
+  #overlay.hidden{display:none;}
+  #overlay button{
+    background:var(--accent); color:#0f172a; border:none; border-radius:8px;
+    padding:8px 18px; font-weight:700; font-size:0.9rem; cursor:pointer;
+  }
+  #overlay button:hover{filter:brightness(1.1);}
+  footer{font-size:0.75rem; opacity:0.55; text-align:center;}
+  footer a{color:var(--accent); text-decoration:none;}
+</style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game"></canvas>
+    <div id="hud">Score: <span id="score">0</span> &nbsp;|&nbsp; Best: <span id="best">0</span></div>
+    <div id="overlay">
+      <div style="font-size:1.05rem; font-weight:700;">Press Space / Tap to Jump</div>
+      <button id="startBtn">Start</button>
+    </div>
+  </div>
+  <footer>
+    <a href="https://github.com/GIETHESHV">← back to GIETHESHV on GitHub</a>
+  </footer>
+
+<script>
+(function(){
+  const canvas = document.getElementById('game');
+  const ctx = canvas.getContext('2d');
+  const overlay = document.getElementById('overlay');
+  const startBtn = document.getElementById('startBtn');
+  const scoreEl = document.getElementById('score');
+  const bestEl = document.getElementById('best');
+
+  const W = 640, H = 220;
+  canvas.width = W; canvas.height = H;
+
+  const GROUND_Y = H - 34;
+  let best = 0;
+
+  let state = 'idle'; // idle | running | over
+  let player, obstacles, speed, score, spawnTimer, frame;
+
+  function resetState(){
+    player = { x: 60, y: GROUND_Y - 34, w: 30, h: 34, vy: 0, jumping: false };
+    obstacles = [];
+    speed = 4.4;
+    score = 0;
+    spawnTimer = 260;
+    frame = 0;
+  }
+
+  function jump(){
+    if (state === 'idle') { startGame(); return; }
+    if (state === 'over') { startGame(); return; }
+    if (!player.jumping){
+      player.vy = -10.2;
+      player.jumping = true;
+    }
+  }
+
+  function startGame(){
+    resetState();
+    state = 'running';
+    overlay.classList.add('hidden');
+    requestAnimationFrame(loop);
+  }
+
+  function endGame(){
+    state = 'over';
+    best = Math.max(best, score);
+    bestEl.textContent = best;
+    overlay.classList.remove('hidden');
+    overlay.innerHTML = '<div style="font-size:1.05rem; font-weight:700;">Game Over — Score ' + score + '</div><button id="startBtn2">Retry</button>';
+    document.getElementById('startBtn2').addEventListener('click', startGame);
+  }
+
+  function spawnObstacle(){
+    const isBird = Math.random() < 0.28 && score > 8;
+    if (isBird){
+      const h = 20;
+      obstacles.push({ x: W + 10, y: GROUND_Y - 60 - Math.random()*20, w: 26, h: h, type:'bird' });
+    } else {
+      const h = 28 + Math.random()*14;
+      obstacles.push({ x: W + 10, y: GROUND_Y - h, w: 18 + Math.random()*10, h: h, type:'cactus' });
+    }
+  }
+
+  function rectsOverlap(a,b){
+    return a.x < b.x + b.w && a.x + a.w > b.x && a.y < b.y + b.h && a.y + a.h > b.y;
+  }
+
+  function update(){
+    frame++;
+    speed += 0.0012;
+
+    player.vy += 0.55;
+    player.y += player.vy;
+    if (player.y > GROUND_Y - player.h){
+      player.y = GROUND_Y - player.h;
+      player.vy = 0;
+      player.jumping = false;
+    }
+
+    spawnTimer -= speed;
+    if (spawnTimer <= 0){
+      spawnObstacle();
+      spawnTimer = 300 + Math.random()*120;
+    }
+
+    for (const o of obstacles) o.x -= speed;
+    obstacles = obstacles.filter(o => o.x + o.w > -10);
+
+    const hitbox = { x: player.x+6, y: player.y+4, w: player.w-12, h: player.h-8 };
+    for (const o of obstacles){
+      if (rectsOverlap(hitbox, o)){ endGame(); return; }
+    }
+
+    if (frame % 6 === 0) score++;
+    scoreEl.textContent = score;
+  }
+
+  function drawGround(){
+    ctx.strokeStyle = 'rgba(226,232,240,0.35)';
+    ctx.lineWidth = 2;
+    ctx.beginPath();
+    ctx.moveTo(0, GROUND_Y+1);
+    ctx.lineTo(W, GROUND_Y+1);
+    ctx.stroke();
+    ctx.fillStyle = 'rgba(226,232,240,0.25)';
+    const off = (frame * (speed)) % 24;
+    for (let x = -off; x < W; x += 24){
+      ctx.fillRect(x, GROUND_Y+6, 12, 2);
+    }
+  }
+
+  function drawPlayer(){
+    ctx.fillStyle = '#38bdf8';
+    const bob = player.jumping ? 0 : Math.sin(frame/4)*1.5;
+    ctx.fillRect(player.x, player.y+bob, player.w, player.h);
+    ctx.fillStyle = '#0f172a';
+    ctx.fillRect(player.x+18, player.y+6+bob, 5, 5);
+  }
+
+  function drawObstacles(){
+    for (const o of obstacles){
+      if (o.type === 'bird'){
+        ctx.fillStyle = '#f97316';
+        const wing = Math.sin(frame/3)*4;
+        ctx.fillRect(o.x, o.y, o.w, o.h*0.5);
+        ctx.fillRect(o.x+4, o.y-wing, o.w-8, 4);
+      } else {
+        ctx.fillStyle = '#4ade80';
+        ctx.fillRect(o.x, o.y, o.w, o.h);
+      }
+    }
+  }
+
+  function draw(){
+    ctx.clearRect(0,0,W,H);
+    const grad = ctx.createLinearGradient(0,0,0,H);
+    grad.addColorStop(0,'rgba(15,23,42,0)');
+    grad.addColorStop(1,'rgba(15,23,42,0.15)');
+    ctx.fillStyle = grad;
+    ctx.fillRect(0,0,W,H);
+
+    drawGround();
+    drawObstacles();
+    drawPlayer();
+  }
+
+  function loop(){
+    if (state !== 'running') return;
+    update();
+    draw();
+    if (state === 'running') requestAnimationFrame(loop);
+  }
+
+  window.addEventListener('keydown', (e) => {
+    if (e.code === 'Space' || e.code === 'ArrowUp'){
+      e.preventDefault();
+      jump();
+    }
+  });
+  canvas.addEventListener('pointerdown', jump);
+  startBtn.addEventListener('click', startGame);
+
+  resetState();
+  draw();
+})();
+</script>
+</body>
+</html>
